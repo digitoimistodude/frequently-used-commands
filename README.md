@@ -4,7 +4,7 @@ This is a collection of Dude's frequently used commands on servers or command li
 
 ## SSL
 
-#####  Let's Encrypt test - test for whether all the certs renew correctly:
+#####  Let's Encrypt test - test for whether all the certs renew correctly
 
 ``` bash
 /opt/letsencrypt/certbot-auto renew --dry-run
