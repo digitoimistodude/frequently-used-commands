@@ -9,6 +9,7 @@ This is a collection of Dude's frequently used commands on servers or command li
 3. [Quick backup entire site](#quick-backup-entire-site)
 4. [Check WordPress versions in composer.json](#check-wordpress-versions-in-composerjson)
 5. [Replace WordPress versions in composer.json (macOS)](#replace-wordpress-versions-in-composerjson-macos)
+6. [Optimize video for web](#optimize-video-for-web)
 
 ## SSL
 
@@ -57,6 +58,20 @@ alias updateversion='find ~/Projects/ -name composer.json -maxdepth 2 -exec sed 
 ```
 
 Then you can update any version by typing `updateversion oldversion newversion`, for example WordPress 4.2.3 to WordPress 4.2.4: `updateversion 4.2.3 4.2.4`.
+
+#### Optimize video for web
+
+For web optimized mp4:
+
+``` bash
+HandBrakeCLI -i input.mp4 -o output.mp4 --encoder x264 --vb 900 --ab 128 --maxWidth 640 --maxHeight 480 --two-pass --optimize
+```
+
+For web optimized webm:
+
+``` bash
+ffmpeg -i input.mp4 -acodec libvorbis -vcodec libvpx output.webm
+```
 
 ### Footnotes
 
