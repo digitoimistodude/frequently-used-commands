@@ -10,6 +10,7 @@ This is a collection of Dude's frequently used commands on servers or command li
 4. [Check WordPress versions in composer.json](#check-wordpress-versions-in-composerjson)
 5. [Replace WordPress versions in composer.json (macOS)](#replace-wordpress-versions-in-composerjson-macos)
 6. [Optimize video for web](#optimize-video-for-web)
+7. [Lowercase all in a directory](#lowercase-all-in-a-directory)
 
 ## SSL
 
@@ -71,6 +72,14 @@ For web optimized webm:
 
 ``` bash
 ffmpeg -i input.mp4 -acodec libvorbis -vcodec libvpx output.webm
+```
+
+#### Lowercase all in a directory
+
+Useful for example after downloading a pack of fonts that are capitalized
+
+``` bash
+rename -f 'y/A-Z/a-z/' *
 ```
 
 ### Footnotes
