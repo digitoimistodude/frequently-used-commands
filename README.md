@@ -11,6 +11,7 @@ This is a collection of Dude's frequently used commands on servers or command li
 5. [Replace WordPress versions in composer.json (macOS)](#replace-wordpress-versions-in-composerjson-macos)
 6. [Optimize video for web](#optimize-video-for-web)
 7. [Lowercase all in a directory](#lowercase-all-in-a-directory)
+8. [Rename all in a directory](#rename-all-in-a-directory)
 
 ## SSL
 
@@ -80,6 +81,26 @@ Useful for example after downloading a pack of fonts that are capitalized
 
 ``` bash
 rename -f 'y/A-Z/a-z/' *
+```
+
+#### Rename all in a directory
+
+Useful for example after downloading a pack of fonts that have useless -webfont appended, or in any case that lots of files are in wrong format.
+
+``` bash
+LC_ALL=C find ./ -type f -exec sed -i '' -e 's/foo/bar/g' {} \;
+```
+
+Or dry run:
+
+``` bash
+rename -nvs searchword replaceword *
+```
+
+And the real thing:
+
+``` bash
+rename -vs searchword replaceword *
 ```
 
 ### Footnotes
