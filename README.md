@@ -29,8 +29,10 @@ grep -R "gravityforms" --include "composer.json" Projects/
 
 ##### Quick backup entire site
 
+Make complete working offline mirror of a website using `wget`:
+
 ``` bash
-wget --cache=off -U "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36" --cookies=on --glob=on --tries=3 --proxy=off -e robots=off -x -r --level=1 -p -H -k --quota=100m http://www.example.com/
+wget -U 'Mozilla/5.0 (X11; Linux x86_64; rv:30.0) Gecko/20100101 Firefox/30.0' --mirror --convert-links --adjust-extension --page-requisites --cache=off --cookies=on --glob=on --tries=3 --proxy=off -e --robots=off --no-parent http://example.com
 ```
 
 ##### Check WordPress versions in composer.json
