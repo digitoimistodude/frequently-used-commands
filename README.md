@@ -29,10 +29,10 @@ grep -R "gravityforms" --include "composer.json" Projects/
 
 ##### Quick backup entire site
 
-Make complete working offline mirror of a website using `wget`:
+Make complete working offline mirror of a website using `httrack` (if you don't have it, install: `brew install httrack`:
 
 ``` bash
-wget -U 'Mozilla/5.0 (X11; Linux x86_64; rv:30.0) Gecko/20100101 Firefox/30.0' --mirror --convert-links --adjust-extension --page-requisites --cache=off --cookies=on --glob=on --tries=3 --proxy=off -e --robots=off --no-parent http://example.com
+httrack https://www.fullmaindomain.com
 ```
 
 ##### Check WordPress versions in composer.json
