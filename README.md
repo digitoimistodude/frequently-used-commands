@@ -31,11 +31,8 @@ grep -R "gravityforms" --include "composer.json" Projects/
 
 Make a complete working offline mirror of a website:
 
-1. Get [ArchiveBox](https://github.com/pirate/ArchiveBox) and clone it to your home directory
-2. Run:
-
 ``` bash
-cd ~/ArchiveBox && echo 'http://fullmaindomain.com' | ./archive
+wget --mirror --convert-links --adjust-extension --page-requisites --no-parent www.domain.fi
 ```
 
 ##### Check WordPress versions in composer.json
