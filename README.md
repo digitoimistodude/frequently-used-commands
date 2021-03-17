@@ -1,3 +1,6 @@
+| :bangbang: | **This repository is no longer maintained. Deprecated in favor of [Cacher](https://www.cacher.io/).**  |
+|:------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
 # Frequently used on CLI
 
 This is a collection of Dude's frequently used commands on servers or command line interfaces by [Digitoimisto Dude Oy](https://www.dude.fi) developer team.
